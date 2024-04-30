@@ -1,6 +1,6 @@
 #ifndef HEAP_H
 #define HEAP_H
-
+#include <algorithm>
 #include <vector>
 #include <cmath>  // for floor
 
@@ -60,7 +60,7 @@ void Heap<T>::insert(T value) {
   int n = values.size() - 1;
   values.push_back(value);
   while (values[n - 1] < values[n] && n > 0){
-    swap(values[n-1],values[n]);
+    std::swap(values[n-1],values[n]);
     n--;
   }
 }
