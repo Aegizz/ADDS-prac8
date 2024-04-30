@@ -59,8 +59,8 @@ void Heap<T>::insert(T value) {
   // TODO: TO BE IMPLEMENTED
   int n = values.size() - 1;
   values.push_back(value);
-  while (values[n - 1] < values[n] && n > 0){
-    std::swap(values[n-1],values[n]);
+  while (values[(n - 1)/2] < values[n] && n > 0){
+    std::swap(values[(index-1)/2],values[n]);
     n--;
   }
 }
