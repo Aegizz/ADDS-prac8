@@ -61,7 +61,7 @@ void Heap<T>::insert(T value) {
   values.push_back(value);
   while (values[(n - 1)/2] < values[n] && n > 0){
     std::swap(values[(n-1)/2],values[n]);
-    n--;
+    n = (n-1)/2;
   }
 }
 
