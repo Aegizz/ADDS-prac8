@@ -57,8 +57,9 @@ Heap<T>::Heap(std::vector<T> start_values) {
 template <typename T>
 void Heap<T>::insert(T value) {
   // TODO: TO BE IMPLEMENTED
-  int n = values.size() - 1;
   values.push_back(value);
+
+  int n = values.size() - 1;
   while (values[(n - 1)/2] < values[n] && n > 0){
     std::swap(values[(n-1)/2],values[n]);
     n = (n-1)/2;
