@@ -10,7 +10,7 @@ int kth_largest(std::vector<int> values, int k){
         pq.push(values[i]);
 
     }
-    for (int i = 0; i < (n-k)-1; i++){
+    for (int i = 0; i < (n-k); i++){
         pq.pop();
     }
     return pq.top();
